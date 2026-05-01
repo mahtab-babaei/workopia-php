@@ -3,7 +3,7 @@
  * Get the base path
  * 
  * @param string $path
- * return string
+ * @return string
  */
 function basePath($path = '') 
 {
@@ -14,7 +14,7 @@ function basePath($path = '')
  * Load a view
  * 
  * @param string $name
- * return void
+ * @return void
  */
 function loadView($name) 
 {
@@ -31,7 +31,7 @@ function loadView($name)
  * Load a partial
  * 
  * @param string $partial
- * return void
+ * @return void
  */
 function loadPartial($name) 
 {
@@ -42,4 +42,30 @@ function loadPartial($name)
   } else {
     echo "file '$name' not founded!";
   }
+}
+
+/**
+ * Inspect value(s)
+ * 
+ * @param mixed $value
+ * @return void
+ */
+function inspect($value)
+{
+  echo '<pre>';
+  var_dump($value);
+  echo '</pre>';
+}
+
+/**
+ * Inspect value(s) and die
+ * 
+ * @param mixed $value
+ * @return void
+ */
+function inspectAndDie($value)
+{
+  echo '<pre>';
+  die(var_dump($value));
+  echo '</pre>';
 }
